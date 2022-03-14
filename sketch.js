@@ -1,4 +1,5 @@
 
+let mood = ['sword in the stone', 'holy grail', 'crown', 'horse', 'surprised', 'contemplative', 'mad', 'curious'];
 let geo = [ 'Tintagil', 'Camelot', 'Avilion', 'Stonehenge', 'Caerleon', 'Britain', 'Cornwall', 'the Isle of Life', 'Glastonbury'];
 let being = ['knight', 'wizard', 'queen', 'king', 'witch', 'squire', 'lord', 'lady'];
 let sword = []
@@ -45,17 +46,18 @@ function preload(){
   let sword24 = loadImage('sword24.jpg');
   let sword25 = loadImage('sword25.jpg');
   sword =
-  [sword1,sword2,sword3,sword4,sword5,sword6,sword7,sword8,sword9,sword10,sword11,sword12,sword13,sword14,sword15,sword16,sword17,sword18,sword19,sword20] 
+  [sword1,sword2,sword3,sword4,sword5,sword6,sword7,sword8,sword9,sword10,sword11,sword12,sword13,sword14,sword15,sword16,sword17,sword18,sword19,sword20]
   landscape = loadImage('paper.png');
 }
 
 function setup() {
   createCanvas(800, 1000);
-  background(227, 202, 163);
+  background(landscape);
   frameRate(60);
   intText();
 
 
+  console.log(mood[int(random(mood.length))]);
   console.log(geo[3])
   console.log(being.length);
 
@@ -67,8 +69,13 @@ function draw() {
 }
 
 function mousePressed() {
+  imageMode(CORNER);
+  background(landscape);
+  imageMode (CENTER);
+  mr = int(random(mood.length));
   gr = int(random(geo.length));
   br = int(random(being.length));
+  wrds = mood[mr];
   wds = geo[gr];
   ws = being[br];
   rc = random(255);
@@ -89,7 +96,6 @@ function intText() {
 }
 
 function fortText() {
-  background (227, 202, 163);
   fill(115, 59, 0)
   intText();
   textAlign(CENTER);
@@ -99,7 +105,3 @@ function fortText() {
   text(wds, 550, 450)
   text(ws, 550, 350)
 }
-  
-  
-
-
