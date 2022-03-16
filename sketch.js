@@ -5,6 +5,7 @@ let being = ['knight', 'wizard', 'queen', 'king', 'witch', 'squire', 'lord', 'la
 let sword = []
 let numsword = 25
 let landscape;
+let myFont;
 
 let mr;
 let gr;
@@ -48,6 +49,7 @@ function preload(){
   sword =
   [sword1,sword2,sword3,sword4,sword5,sword6,sword7,sword8,sword9,sword10,sword11,sword12,sword13,sword14,sword15,sword16,sword17,sword18,sword19,sword20]
   landscape = loadImage('paper.png');
+  myFont = loadFont('MedievalSharp-Regular.ttf');
 }
 
 function setup() {
@@ -55,6 +57,7 @@ function setup() {
   background(landscape);
   frameRate(60);
   intText();
+  textFont(myFont);
 
 
   console.log(mood[int(random(mood.length))]);
@@ -91,6 +94,7 @@ function intText() {
   fill(115, 59, 0);
   textAlign(CENTER);
   textSize(20)
+  textFont(myFont);
   //this is a lie, you can click anywhere
   text('Click the page to enter.', width*0.5, height*0.2);
 }
