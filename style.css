@@ -7,3 +7,38 @@ html, body {
 canvas {
   display: block;
 }
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
+}
+
+button {
+  font-family: 'MedievalSharp', cursive;
+  font-weight: bold;
+  font-size: large;
+  margin: right;
+  display: block;
+  padding: 10px;
+  color: #774006;
+  background-color: #d7c9c1;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: inherit;
+  width: 200px;
+  height: 100px;
+  outline: none;
+  
+  right: 10%;
+}
