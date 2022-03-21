@@ -108,7 +108,7 @@ function fortText() {
   textAlign(CENTER);
   text('A long time ago, a stone was placed atop a hill by a great sorcerer.', 400, 200);
   text('A prophet fortold that a sword would be placed within the stone.' , 400, 250);
-  text ('One day whoever pulled out the blade would be ruler of the kingdom.', 400, 300);
+  text ('Whoever pulled out the blade would become the ruler of the kingdom.', 400, 300);
   text('It is now up to you to fulfill this prophecy and claim your destiny.', 400, 350);
   text('You meet a', 550, 450);
   text('in', 550, 550);
