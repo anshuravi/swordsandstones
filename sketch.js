@@ -3,9 +3,11 @@ let mood = ['sword in the stone', 'holy grail', 'crown', 'horse', 'surprised', '
 let geo = [ 'Tintagil', 'Camelot', 'Avilion', 'Stonehenge', 'Caerleon', 'Britain', 'Cornwall', 'the Isle of Life', 'Glastonbury'];
 let being = ['knight', 'wizard', 'queen', 'king', 'witch', 'squire', 'lord', 'lady'];
 let sword = []
-let numsword = 25
+let numsword = 25;
 let landscape;
 let myFont;
+let manuscript = [];
+let nummanuscript = 6;
 
 let mr;
 let gr;
@@ -48,13 +50,21 @@ function preload(){
   let sword24 = loadImage('sword24color.png');
   let sword25 = loadImage('sword25color.png');
   sword =
-  [sword1,sword2,sword3,sword4,sword5,sword6,sword7,sword8,sword9,sword10,sword11,sword12,sword13,sword14,sword15,sword16,sword17,sword18,sword19,sword20]
+  [sword1,sword2,sword3,sword4,sword5,sword6,sword7,sword8,sword9,sword10,sword11,sword12,sword13,sword14,sword15,sword16,sword17,sword18,sword19,sword20];
+ let manuscript1 = loadImage('manuscriptcrop1.png');
+ let manuscript2 = loadImage('manuscript2dark.png');
+ let manuscript3 = loadImage('manuscriptcrop3.png');
+ let manuscript4 = loadImage('manuscriptcrop4.png');
+ let manuscript5 = loadImage('manuscriptcrop5.png');
+ let manuscript6 = loadImage('manuscriptcrop6.png');
+ manuscript =
+ [manuscript1, manuscript2,manuscript3,manuscript4,manuscript5,manuscript6];
   landscape = loadImage('paper.png');
   myFont = loadFont('MedievalSharp-Regular.ttf');
 }
 
 function setup() {
-  createCanvas(800, 950);
+  createCanvas(850, 900);
   background(landscape);
   frameRate(60);
   intText();
@@ -90,7 +100,9 @@ function buttonPressed() {
   fortText();
   console.log(wrds);
   let randoImg = random(sword);
-  image (randoImg, 250, 560, 300,400 );
+  image (randoImg, 570, 560, 300, 400 );
+  let randoPic = random(manuscript);
+  image (randoPic, 190, 290, 200,250 );
 }
 
 function intText() {
@@ -105,15 +117,16 @@ function intText() {
 function fortText() {
   fill(115, 59, 0)
   intText();
-  textAlign(CENTER);
-  text('A long time ago, a stone was placed atop a hill by a great sorcerer.', 400, 200);
-  text('A prophet fortold that a sword would be placed within the stone.' , 400, 250);
-  text ('Whoever pulled out the blade would become the ruler of the kingdom.', 400, 300);
-  text('It is now up to you to fulfill this prophecy and claim your destiny.', 400, 350);
-  text('You meet a', 550, 450);
-  text('in', 550, 550);
-  text('who gave you this sword.', 550, 650);
-  text(wds, 550, 600)
-  text(ws, 550, 500)
-  text ('You must place this sword in the stone. Good luck on your journey.', 400, 790);
+
+  text('long time ago, a sword was placed in a stone by a', 528, 200);
+  text('great sorcerer. Legend says that a king unsheathed', 530, 250);
+  text ('the blade bringing peace to the kingdom. When the ', 530, 300);
+  text ('King passed, the sword was lost with him. That is', 525, 350);
+  text ('until one day...', 365, 400);
+
+  text('You meet a', 250, 470);
+  text('in', 250, 570);
+  text('who gave you this sword.', 250, 670);
+  text(wds, 250, 620)
+  text(ws, 250, 520)
 }

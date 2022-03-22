@@ -39,6 +39,6 @@ button {
   width: 200px;
   height: 100px;
   outline: none;
-  
+  position: fixed;
   right: 10%;
 }
