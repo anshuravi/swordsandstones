@@ -69,7 +69,7 @@ function setup() {
   frameRate(60);
   intText();
   textFont(myFont);
- let button = createButton('Your Destiny Awaits.');
+ let button = createButton('Click Here For Your Destiny Awaits.');
  button.parent('button-holder');
  button.mousePressed(buttonPressed);
 
@@ -110,7 +110,7 @@ function intText() {
   textAlign(CENTER);
   textSize(20)
   textFont(myFont);
-  //this is a lie, you can click anywhere
+ 
 
 }
 
@@ -121,7 +121,7 @@ function fortText() {
   text('long time ago, a sword was placed in a stone by a', 528, 200);
   text('great sorcerer. Legend says that a king unsheathed', 530, 250);
   text ('the blade bringing peace to the kingdom. When the ', 530, 300);
-  text ('King passed, the sword was lost with him. That is', 525, 350);
+  text ('king passed, the sword was lost with him. That is', 525, 350);
   text ('until one day...', 365, 400);
 
   text('You meet a', 250, 470);
